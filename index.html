@@ -96,60 +96,62 @@
         <img src="./images/sona.jpg" alt="sonakshi_img" id="sona" class="img">
         <div class="container2">
     
-            <button type="button" onclick="traditional()" class="btn1"  >Treditional</button>
+            <button type="button" onclick="look('traditional')" class="btn1"  >Treditional</button>
     
-            <button type="button" onclick="western() " class="btn2" >Western</button>
+            <button type="button" onclick="look('western') " class="btn2" >Western</button>
     
-            <button type="button" onclick="punjabi()" class="btn3">Punjabi</button>
+            <button type="button" onclick="look('punjabi')" class="btn3">Punjabi</button>
         </div>
     </div>
 
 
     <script>
-        const imgElement = document.getElementById("sona");
-        function traditional(){
+       
+
+        function look(style){
+
+            const imgElement = document.getElementById("sona");
+            const containerElement = document.getElementById("container");
+            const headingElement = document.getElementById("heading");
+
+            if (style == 'traditional'){
+                
             imgElement.src = "./images/traditional2.jpg"
             imgElement.style.border = "2px solid #333300"
 
-            const containerElement = document.getElementById("container");
             containerElement.style.border = "2px solid #333300"
 
-            const headingElement = document.getElementById("heading");
             headingElement.innerText = "Treditional"
             headingElement.style.color = "#333300"
 
-            
-
-
-        }
-
-        function western(){
+            } else if(style == "western"){
             imgElement.src = "./images/western.jpg"
             imgElement.style.border = "2px solid #804d00"
 
-            const containerElement = document.getElementById("container");
+           
             containerElement.style.border = "2px solid #804d00"
 
-            const headingElement = document.getElementById("heading");
+            
             headingElement.innerText = "Western"
             headingElement.style.color = "#804d00"
 
-
-        }
-
-        function punjabi(){
+            }else{
             imgElement.src = "./images/punjabi.jpg"
             imgElement.style.border = "2px solid #003300"
 
-            const containerElement = document.getElementById("container");
+            
             containerElement.style.border = "2px solid #003300"
 
-            const headingElement = document.getElementById("heading");
+           
             headingElement.innerText = "Punjabi"
             headingElement.style.color = "#003300"
+            }
+  
 
 
         }
+
+     
     </script>
 </body>
 </html>
